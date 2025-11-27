@@ -1,0 +1,179 @@
+@font-face {
+    font-family: 'Roboto';
+    src: url('./fonts/Roboto-Regular.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Roboto';
+    src: url('./fonts/Roboto-Bold.ttf') format('truetype');
+    font-weight: 700;
+    font-style: normal;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    background-color: hsl(234, 29%, 20%);
+}
+
+h2 {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 700;
+    font-size: 3.5rem;
+    color: hsl(234, 29%, 20%);
+    margin: 0 0 1rem 0;
+}
+
+.newsletter-form-section {
+    display: flex;
+    background-color: hsl(0, 0%, 100%);
+    max-width: 900px;
+    width: 100%;
+    border-radius: 30px;
+}
+
+.newsletter-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 3%;
+}
+
+.newsletter-image {
+    display: flex;
+    text-align: center;
+    padding: 3%;
+}
+
+.mobile-image {
+    display: none;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+li {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1rem;
+    gap: 5%;
+}
+
+.newsletter-field {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1.5rem;
+    gap: 0.8rem;
+}
+
+.newsletter-field label {
+    font-weight: 700;
+    font-size: 0.9rem;
+    color: hsl(234, 29%, 20%);
+}
+
+.form-message {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+#error-message {
+    font-weight: 700;
+    font-size: 0.9rem;
+    color: hsl(4, 100%, 67%);
+    margin: 0;
+}
+
+.input-error {
+  border: 2px solid hsl(0, 66%, 54%);
+  background-color: hsl(0, 100%, 98%); 
+}
+
+.input-error:focus {
+  outline: none; 
+  border-color: hsl(4, 100%, 67%);
+  color: hsl(4, 100%, 67%);
+}
+
+.newsletter-field input {
+    padding: 1rem;
+    border: 1px solid hsl(233, 8%, 62%);
+    border-radius: 5px;
+    font-size: 1rem;
+    font-family: 'Roboto', sans-serif;
+}
+
+#submit-form, #dismiss-button {
+    padding: 1rem;
+    background-color: hsl(234, 29%, 20%);
+    color: hsl(0, 0%, 100%);
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    font-weight: 700;
+    width: 100%;
+    cursor: pointer;
+}
+
+.newsletter-success-section {
+    display: none;
+    background-color: hsl(0, 0%, 100%);
+    max-width: 350px;
+    width: 100%;
+    border-radius: 30px;
+    padding: 5%;
+}
+
+.newsletter-success-card img, .newsletter-success-card h2, .newsletter-success-card p {
+    margin-bottom: 8%;
+}
+
+@media (max-width: 700px) {
+
+    h2 {
+        font-size: 3.1rem;
+    }
+
+    p,
+    span {
+        font-size: 1.2rem;
+    }
+
+    .newsletter-form-section {
+        flex-direction: column-reverse;
+        border-radius: 0;
+        height: 100vh;
+    }
+
+    .newsletter-content {
+        padding: 8%;
+    }
+
+    .newsletter-image {
+        padding: 0;
+        background-image: url('/assets/images/illustration-sign-up-mobile.svg');
+        height: 100vh;
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position: top;
+    }
+
+    .mobile-image {
+        display: none;
+        width: auto;
+        height: auto;
+    }
+
+    .desktop-image {
+        display: none;
+    }
+}
